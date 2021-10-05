@@ -24,7 +24,7 @@ Waydroid repository: https://github.com/waydroid/waydroid
   ```bash
   devel-su python3 waydroid.py init
   ```
-  Images can also be downloaded to a custom path by "devel-su python3 waydroid.py init -i <custom path>"
+  Images can also be downloaded to a custom path by "devel-su python3 waydroid.py init -i /custom/path"
 
 ### 5. Create "/etc/gbinder.d/alien.conf" with the following content
   File attached.
