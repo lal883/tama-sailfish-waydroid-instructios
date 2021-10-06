@@ -37,6 +37,8 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   devel-su python3 waydroid.py init
   ```
   Images can also be downloaded to a custom path by "devel-su python3 waydroid.py init -i /custom/path"
+  
+  If the images were downloaded to the default location, these can be moved to different location (like home partition) manually and free up space in the root partition. Be sure to update the new path to image in /var/lib/waydroid/waydroid.cfg after the drill.
 
 ### 5. Create "/etc/gbinder.d/alien.conf" with the following content
   
@@ -69,7 +71,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   rm -rf waydroidrootfs
   ```
   Copy back "system.img" to phone.
-  Will be probably a good idea to very sha256sum of the image before copying between the phone and PC to verify that the file wasn't corrupted during copying.
+  Will be probably a good idea to verify sha256sum of the image before copying between the phone and PC to be sure that the file wasn't corrupted during copying.
 
 ### 7. Modify the file /vendor/etc/vintf/manifest.xml
   ```bash
@@ -97,4 +99,17 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   python3 waydroid.py show-full-ui
   ```
 
-The last three steps could be simplified probably. Clicking Waydroid or android app icons in the app grid were not opening them at least now. Executing command in step 10 was, though.   
+The last three steps could be simplified probably. Clicking Waydroid or android app icons in the app grid were not opening them at least now. Executing command in step 10 was, though.
+
+
+## Found the following to be working/not working currently
+* Camera (no flash)
+* Spotify
+* Whatsapp (haven't tested calls)
+* PrimeVideo
+* Browser (YouTube videos wouldn't play but just the audio. Wonder why since PrimeVideo is working really well)
+* No notification sounds, and notifications are restricted to Waydroid only
+* No easy file sharing between Sailfish and Waydroid
+* No vibrations for/inside Waydroid events
+* Apps couldn't access location
+*  .. if you tried it, do mention more here, or add your fixes
