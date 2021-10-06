@@ -15,7 +15,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
 ### 2. Install python3-gobject, lxc, dnsmasq
   ```bash
   devel-su zypper ref
-  devel-su zypper in python3-gobject lxc lxc-libs
+  devel-su zypper in python3-gobject lxc git
   ```
 
   Add [Chum repo](https://github.com/sailfishos-chum/main) and install dnsmasq from there.
@@ -53,10 +53,10 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   ```
   File attached.
 
-### 6. Have to resize the downloaded "system.img" in step 4 and replace the file /system/etc/ld.config.29.txt with the one attached. 
+### 6. Have to resize the downloaded "system.img" in step 4 and replace the file in the image with the one attached. 
   
   This will be updated in later Waydroid releases as informed by Erfan, and this step wouldn't be needed.
-  "resize2fs" was not available in Sailfish OS when I tried, so I copied the system.img to PC and did this over there and copied back the modified image to phone.
+  "resize2fs" was not available in Sailfish OS when I tried, so I copied the system.img to PC and did this over there and copied back the modified image to phone. However, check while logged in as `root`, it should be at `/sbin/resize2fs`, part of `e2fsprogs`.
   
   If there is an easier way to do it on the phone itself, do mention.
   ```bash
@@ -65,7 +65,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   resize2fs system.img 2G
   sudo mount system.img waydroidrootfs
   sudo cp /path/to/downloaded/ld.config.29.txt ./waydroidrootfs/system/etc/ld.config.29.txt
-  sudo umount rootfs
+  sudo umount waydroidrootfs
   rm -rf waydroidrootfs
   ```
   Copy back "system.img" to phone.
