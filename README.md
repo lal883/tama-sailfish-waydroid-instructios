@@ -16,6 +16,7 @@ Waydroid repository: https://github.com/waydroid/waydroid
   ```
 
 Add chum repo and install dnsmasq from there.
+[Chum repo](https://github.com/sailfishos-chum/main)
 
 ### 3. Clone waydroid repo
   ```bash
