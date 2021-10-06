@@ -1,5 +1,7 @@
 # Instructions for running Waydroid on Sony Xperia XZ2C
 
+Sailfish OS release: 4.2.0.21, aarch64. Thanks to rinigus for the stable Tama Sailfish port.
+
 Thanks to Erfan Abdi for the instructions, modifications and and help with debugging over Telegram Waydroid channel.
 
 Waydroid repository: https://github.com/waydroid/waydroid
@@ -8,10 +10,12 @@ Waydroid repository: https://github.com/waydroid/waydroid
   http://repo.merproject.org/obs/nemo:/devel:/hw:/pine:/dontbeevil/sailfish_4.1.0.24_aarch64/aarch64/python3-gbinder-python-1.0.0+git1-1.10.1.jolla.aarch64.rpm
 
 
-### 2. Install python3-gobject, lxc
+### 2. Install python3-gobject, lxc, dnsmasq
   ```bash
   devel-su zypper in python3-gobject lxc
   ```
+
+Add chum repo and install dnsmasq from there.
 
 ### 3. Clone waydroid repo
   ```bash
