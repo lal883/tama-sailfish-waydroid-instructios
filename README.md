@@ -107,9 +107,9 @@ The last three steps could be simplified probably. Clicking Waydroid or android 
 * Spotify
 * Whatsapp (haven't tested calls)
 * PrimeVideo
-* Browser (YouTube videos wouldn't play but just the audio. Wonder why since PrimeVideo is working really well)
+* Browser (YouTube videos wouldn't play but just the audio. Wonder why, since PrimeVideo is working well)
 * No notification sounds, and notifications are restricted to Waydroid only
 * No easy file sharing between Sailfish and Waydroid
 * No vibrations for/inside Waydroid events
 * Apps couldn't access location
-*  .. if you tried it, do mention more here, or add your fixes
+*  .. if you tried Waydroid, do mention more here, or add your fixes
