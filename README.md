@@ -15,8 +15,7 @@ Waydroid repository: https://github.com/waydroid/waydroid
   devel-su zypper in python3-gobject lxc
   ```
 
-Add chum repo and install dnsmasq from there.
-[Chum repo](https://github.com/sailfishos-chum/main)
+Add [Chum repo](https://github.com/sailfishos-chum/main) and install dnsmasq from there.
 
 ### 3. Clone waydroid repo
   ```bash
