@@ -1,8 +1,8 @@
 # Instructions to run Waydroid on Sony Xperia XZ2C (Tama platform) running Sailfish OS
 
-Sailfish OS release: 4.2.0.21, aarch64. Thanks to rinigus for the stable [Tama Sailfish port](https://github.com/sailfishos-sony-tama/main).
+Thanks to rinigus for the stable [Tama Sailfish port](https://github.com/sailfishos-sony-tama/main).
 
-Thanks to Erfan Abdi for the instructions, modifications and and help with debugging over Telegram Waydroid channel.
+Thanks to Erfan Abdi for the instructions, modifications and help with debugging over Waydroid Telegram channel.
 
 Waydroid repository: https://github.com/waydroid/waydroid
 
@@ -101,6 +101,18 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
 
 The last three steps could be simplified probably. Clicking Waydroid or android app icons in the app grid were not opening them at least now. Executing command in step 10 was, though.
 
+### Launching Waydroid apps from Sailfish app grid
+Thanks to Taepi on Waydroid Telegram channel.
+
+Add a symlink to the python script.
+```bash
+devel-su ln -s full/path/to/waydroid.py /usr/local/bin/waydroid
+```
+Tapping the Waydroid app icon from Sailfish app grid should open the Waydroid app window now.
+
+Since Waydroid multi-windows option wasn't working when I tried, couldn't open two Waydroid app windows simultaneously. Clicking a new app icon drew over the previouly open waydroid window.
+
+Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid".
 
 ## Found the following to be working/not working currently
 * Camera (no flash)
