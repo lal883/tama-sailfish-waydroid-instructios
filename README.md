@@ -29,6 +29,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   ```bash
   git clone https://github.com/waydroid/waydroid.git
   ```
+  Note: there have been reports that cloning the repo directly under user home location removes the contents of cloned directory wehn running some Waydroid commands. It is suggested to clone the repo within a subfolder under user home until this gets updated.
 
 ### 4. Initialise waydroid (also refer to https://docs.waydro.id)
   cd to the cloned Waydroid directory and run the python script as root. By default, this downloads and extracts images to /var/lib/waydroid/images/.
@@ -70,7 +71,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   rm -rf waydroidrootfs
   ```
   If the image was corrected on a PC, copy back the "system.img" to phone.
-  Will be a good idea to verify sha256sum of the image before copying between the phone and PC to be sure that the file wasn't corrupted during copying.
+  Will be a good idea to verify sha256sum of the image before transferring between the phone and PC to be sure that the file wasn't corrupted during the transfer process.
 
 ### 7. Modify the file /vendor/etc/vintf/manifest.xml
   ```bash
@@ -113,14 +114,21 @@ Since Waydroid multi-windows option wasn't working when I tried, couldn't open t
 
 Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid".
 
+### Sailfish - Waydroid integration
+Some level of integration can be achieved between Sailfish and Waydroid instance by making use of KDE Connect. This would allow sharing clipboard contents, file transfers and media control.
+
+Install "Sailfish Connect" from OpenRepos.net on Sailfish and  install KDE Connect android application under Waydroid instance. Pair it and that is it. Ability to control media playing in Waydroid (eg. Spotify) from Sailfish Connect can be useful that the Waydroid UI could be completely closed from the Sailfish home screen yet have control over media playback.
+
+Unfortunately the current implementation of Sailfish Connect do not have the plugin to receive notifications from a connected device yet. It would have been convinient if Waydroid notifications could be transferred to Sailfish OS through KDE connect.
+
 ## Found the following to be working/not working currently
 * Camera (no flash)
 * Spotify
 * Whatsapp (haven't tested calls)
 * PrimeVideo
 * Browser (YouTube videos wouldn't play but just the audio. Wonder why, since PrimeVideo is working well)
+* KDE connect could be used for file and clipboard sharing between Sailfish and Waydroid
 * No notification sounds, and notifications are restricted to Waydroid only
-* No easy file sharing between Sailfish and Waydroid
 * No vibrations for/inside Waydroid events
 * Apps couldn't access location
 *  .. if you tried Waydroid, do mention more here, or add your fixes
