@@ -60,9 +60,8 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   This will be updated in later Waydroid releases as informed by Erfan, and this step wouldn't be needed.
   "resize2fs" was not available in Sailfish OS when I tried, so I copied the system.img to PC and did this over there and copied back the modified image to phone. However, check while logged in as `root`, it should be at `/sbin/resize2fs`, part of `e2fsprogs`.
   
-  If there is an easier way to do it on the phone itself, do mention.
   ```bash
-  # on a PC, cd to the directory where you copied the system.img from phone
+  # cd to the directory where you have the system.img on the phone or copied to a PC
   mkdir waydroidrootfs
   resize2fs system.img 2G
   sudo mount system.img waydroidrootfs
@@ -70,8 +69,8 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   sudo umount waydroidrootfs
   rm -rf waydroidrootfs
   ```
-  Copy back "system.img" to phone.
-  Will be probably a good idea to verify sha256sum of the image before copying between the phone and PC to be sure that the file wasn't corrupted during copying.
+  If the image was corrected on a PC, copy back the "system.img" to phone.
+  Will be a good idea to verify sha256sum of the image before copying between the phone and PC to be sure that the file wasn't corrupted during copying.
 
 ### 7. Modify the file /vendor/etc/vintf/manifest.xml
   ```bash
