@@ -57,6 +57,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   File attached.
 
 ### 6. Have to resize the downloaded "system.img" in step 4 and replace the file in the image with the one attached. 
+  #### With the recent Waydroid images update this step is probably not needed anymore. Skip this step and if Waydroid fails to start revisit this.
   
   This will be updated in later Waydroid releases as informed by Erfan, and this step wouldn't be needed.
   "resize2fs" was not available in Sailfish OS when I tried, so I copied the system.img to PC and did this over there and copied back the modified image to phone. However, check while logged in as `root`, it should be at `/sbin/resize2fs`, part of `e2fsprogs`.
