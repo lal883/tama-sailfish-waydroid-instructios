@@ -78,12 +78,13 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   Will be a good idea to verify sha256sum of the image before transferring between the phone and PC to be sure that the file wasn't corrupted during the transfer process.
 
 ### 7. Modify the file /vendor/etc/vintf/manifest.xml
+  This step is optional and specifically applicable to Sony Tama devices. Other devices may be able to get Waydroid working without it.
+
   ```bash
   devel-su vi /vendor/etc/vintf/manifest.xml
   ```
   Goto line 310, change "android.hardware.vibrator" to "android.hardware.vibrator.dis"
   Reboot device.
-  This step seems to be optional. I can use Waydroid without it.
 
 
 ### 8. Open a console window and start Waydroid container as super user
