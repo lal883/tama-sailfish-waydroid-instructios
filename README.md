@@ -128,13 +128,17 @@ Install "Sailfish Connect" from OpenRepos.net on Sailfish and  install KDE Conne
 Unfortunately the current implementation of Sailfish Connect do not have the plugin to receive notifications from a connected device yet. It would have been convinient if Waydroid notifications could be transferred to Sailfish OS through KDE connect.
 
 ## Found the following to be working/not working currently
-* Camera (no flash)
+* Camera (no flash and might crash with extended use)
 * Spotify
-* Whatsapp (haven't tested calls)
+* Whatsapp (audio calls work, haven't tested video calls)
 * PrimeVideo
-* Browser (YouTube videos wouldn't play but just the audio. Wonder why, since PrimeVideo is working well)
+* Browser (video playback is inconsistent, sometimes it works and sometimes not. Had better luck with Firefox generally)
 * KDE connect could be used for file and clipboard sharing between Sailfish and Waydroid
 * No notification sounds, and notifications are restricted to Waydroid only
 * No vibrations for/inside Waydroid events
 * Apps couldn't access location
 *  .. if you tried Waydroid, do mention more here, or add your fixes
+
+## Other Tips
+* restart the container directly if Waydroid seem to be misbehaving
+```devel-su waydroid container restart```
