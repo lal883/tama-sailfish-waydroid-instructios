@@ -111,7 +111,7 @@ Tapping the Waydroid app icon from Sailfish app grid should open the Waydroid ap
 
 Since Waydroid multi-windows option wasn't working when I tried, couldn't open two Waydroid app windows simultaneously. Clicking a new app icon drew over the previouly open waydroid window.
 
-Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid".
+Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid". However, you must still be in the directory where waydroid was cloned to to run some of the waydroid commands.
 
 ### Sailfish - Waydroid integration
 Some level of integration can be achieved between Sailfish and Waydroid instance by making use of KDE Connect. This would allow sharing clipboard contents, file transfers and media control.
