@@ -140,5 +140,4 @@ Unfortunately the current implementation of Sailfish Connect do not have the plu
 *  .. if you tried Waydroid, do mention more here, or add your fixes
 
 ## Other Tips
-* restart the container directly if Waydroid seem to be misbehaving
-```devel-su waydroid container restart```
+* Restart the container directly if it feels like Waydroid is misbehaving. Waydroid session should automatically start in a few seconds, so that Android appps can be directly opened from the grid ```devel-su waydroid container restart```
