@@ -79,13 +79,14 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
 
 ### 7. Modify the file /vendor/etc/vintf/manifest.xml
   This step is optional and specifically applicable to Sony Tama devices. Other devices may be able to get Waydroid working without it.
-
+  
   ```bash
   devel-su vi /vendor/etc/vintf/manifest.xml
   ```
   Goto line 310, change "android.hardware.vibrator" to "android.hardware.vibrator.dis"
   Reboot device.
 
+  Note: The above procedure essentially disables vibration in Waydroid. Alternately, to enable vibration in Waydroid (thanks to @piggz) edit "/usr/libexec/droid-hybris/system/etc/init/disabled_services.rc" and remove the line "service vendor.vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service_HYBRIS_DISABLED" and restart the device
 
 ### 8. Open a console window and start Waydroid container as super user
   (also refer to https://docs.waydro.id)
