@@ -8,8 +8,10 @@ Waydroid repository: https://github.com/waydroid/waydroid
 
 Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydroid release 1.1.1.
 
-### 1. Install gbinder-python (thanks to piggz)
-  http://repo.merproject.org/obs/nemo:/devel:/hw:/pine:/dontbeevil/sailfish_4.1.0.24_aarch64/aarch64/python3-gbinder-python-1.0.0+git1-1.10.1.jolla.aarch64.rpm
+### 1. Install gbinder-python (thanks to piggz and HengYeDev)
+  For aarch64: http://repo.merproject.org/obs/nemo:/devel:/hw:/pine:/dontbeevil/sailfish_4.1.0.24_aarch64/aarch64/python3-gbinder-python-1.0.0+git1-1.10.1.jolla.aarch64.rpm
+  
+  For armv7hl: https://repo.sailfishos.org/obs/home:/heng/sailfish_latest_armv7hl/armv7hl/python3-gbinder-python-1.0.0+git1-1.1.1.jolla.armv7hl.rpm
 
 
 ### 2. Install python3-gobject, lxc, dnsmasq
@@ -71,6 +73,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   sudo umount waydroidrootfs
   rm -rf waydroidrootfs
   ```
+  
   If the image was corrected on a PC, copy back the "system.img" to phone.
   Will be a good idea to verify sha256sum of the image before transferring between the phone and PC to be sure that the file wasn't corrupted during the transfer process.
 
@@ -80,6 +83,7 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   ```
   Goto line 310, change "android.hardware.vibrator" to "android.hardware.vibrator.dis"
   Reboot device.
+  This step seems to be optional. I can use Waydroid without it.
 
 
 ### 8. Open a console window and start Waydroid container as super user
@@ -113,7 +117,7 @@ Tapping the Waydroid app icon from Sailfish app grid should open the Waydroid ap
 
 Since Waydroid multi-windows option wasn't working when I tried, couldn't open two Waydroid app windows simultaneously. Clicking a new app icon drew over the previouly open waydroid window.
 
-Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid".
+Hint: with symlink in place, "python3 waydroid.py" in all previous steps way be replaced by simply "waydroid". However, you must still be in the directory where waydroid was cloned to to run some of the waydroid commands.
 
 ### Sailfish - Waydroid integration
 Some level of integration can be achieved between Sailfish and Waydroid instance by making use of KDE Connect. This would allow sharing clipboard contents, file transfers and media control.
