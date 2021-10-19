@@ -66,8 +66,14 @@ Instructions are valid for Sailfish OS release 4.2.0.21 for Sony Tama and Waydro
   
   ```bash
   # cd to the directory where you have the system.img on the phone or copied to a PC
+  mkdir waydroidrootfs
   resize2fs system.img 2G
+  sudo mount system.img waydroidrootfs
+  sudo cp /path/to/downloaded/ld.config.29.txt ./waydroidrootfs/system/etc/ld.config.29.txt
+  sudo umount waydroidrootfs
+  rm -rf waydroidrootfs
   ```
+  
   If the image was corrected on a PC, copy back the "system.img" to phone.
   Will be a good idea to verify sha256sum of the image before transferring between the phone and PC to be sure that the file wasn't corrupted during the transfer process.
 
