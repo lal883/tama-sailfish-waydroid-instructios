@@ -1,6 +1,6 @@
 ## Note: Waydroid has been packaged for Sailfish OS in [Chum repo](https://github.com/sailfishos-chum/main). It is suggested to install it for there.
 
-
+If you already have a manual Waydroid installation and would like to migrate to the Chum waydroid package without affecting current Waydroid installation, backup (cp -a) the contents of /var/lib/waydroid somewhere and delete that directory. Install the waydroid package from chum and copy back the backed up contents to /home/waydroid.
 
 # Instructions to run Waydroid on Sony Xperia XZ2C (Tama platform) running Sailfish OS
 
