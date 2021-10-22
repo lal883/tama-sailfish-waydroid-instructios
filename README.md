@@ -1,4 +1,4 @@
-## Note: Waydroid has been packaged for Sailfish OS in [Chum repo](https://github.com/sailfishos-chum/main). Head over there to install it.
+## Note: Waydroid has been packaged for Sailfish OS in [Chum repo](https://github.com/sailfishos-chum/main). Install it for there.
 
 
 
