@@ -1,3 +1,7 @@
+## Note: Waydroid has been packaged for Sailfish OS in [Chum repo](https://github.com/sailfishos-chum/main). Head over there to install it.
+
+
+
 # Instructions to run Waydroid on Sony Xperia XZ2C (Tama platform) running Sailfish OS
 
 Thanks to rinigus for the stable [Tama Sailfish port](https://github.com/sailfishos-sony-tama/main).
